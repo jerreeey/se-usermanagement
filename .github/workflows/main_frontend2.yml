@@ -50,4 +50,4 @@ jobs:
         app-name: 'frontend2'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_b8d1c927a2e34fc3b93f38b7ed521982 }}
-        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_a7068b278e5f4179b1a6ba6f5da56e05 }}/jerreeey/frontend:${{ github.sha }}'
+        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_a7068b278e5f4179b1a6ba6f5da56e05 }}/jerreeey/frontend:latest'
