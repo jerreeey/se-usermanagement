@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: se-user-mongo
+spec:
+  selector:
+    matchLabels:
+      app: se-user-mongo
+  template:
+    metadata:
+      labels:
+        app: se-user-mongo
+    spec:
+      containers:
+        - name: se-user-mongo
+          image: mongo:latest
+          ports:
+            - containerPort: 27017
+          volumeMounts:
+            - name: storage
+              mountPath: /data/db
+      volumes:
+        - name: storage
+          persistentVolumeClaim:
+            claimName: se-user-mongo-pvc
