@@ -10,6 +10,7 @@ import com.example.userservice.controller.security.auth.UserUpdateRequest;
 
 @RestController
 @RequestMapping("/users")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class UsersRestController {
 
     @Autowired
